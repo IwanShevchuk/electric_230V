@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VG-USS щит електричний ~380V</title>
+<!--
+* Copyright 06.2021 by Ivan Shevchuk  -- ivan.shevchuk@usoftware.co   
+<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+<link href="/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+-->
+<link href="sticky_3.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+/*  дуже важлива штука для поділу - ділення на клітинки */
+* { box-sizing: border-box }
+
+body {}
+.box {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 992px;
+	padding: 40px;
+	background-color: #fafafa;
+    background-image: url('./din_reyka_10_230hp.png');
+}
+
+
+
+.item_0 {
+
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./prozoruy_64p.png');
+}
+
+
+
+.itemEKF {
+/*  Dif-avtomat 1-modul EKF_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./D_EKF_AVDT63M_25A_30mA_prozoruy_64p.png');
+}
+.item::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+.item {
+/*  Dif-avtomat 1-modul electro-house_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./D_electrohaus_RCBO_64p.png');
+}
+.item::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+.item_1 {
+/*  Dif-avtomat 1-modul schnaider_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./D_schnaider_RCBO_64p.png');
+}
+.item_1::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+
+
+.item_2 {
+/*  avtomat 2-modul */
+	display: inline-block;
+	margin: 6px;
+    width: 140px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./D_eaton_2p_120p.png');
+}
+
+.item_3 {
+/*  avtomat 3-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 215px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./avtomat_3p_eatone.png');
+}
+
+.item_4 {
+/*  avtomat 1-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./ekf_1pC10.png');
+}
+
+
+.item_5 {
+/*  Schneider_UZIP 3-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 215px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('./Schneider_UZIP_190x210.png');
+}
+
+h1 { margin:150px auto 30px auto;}
+
+.shema { width: 1799px; height: 1210px; background-image: url('./elektrika_220V_VG_Screenshot (2)_avtomatu.png') ; }
+
+.PC { color: green;}
+.fan { color: violet;}
+.lamp { color: yellow;}
+.water { color: blue;}
+.laptop { color: red;}
+
+.water::after { content: "10mA";
+/* font-size: 12px; position: relative; top: 54px; */ } 
+
+
+.c6::before {
+	content: "C6"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c10::before {	
+	content: "C10"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c16::before {
+	content: "C16"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c20::before {
+	content: "C20"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c25::before {
+	content: "C25"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c40::before {
+	content: "C40"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+
+
+
+/* reserved avtomats */
+#a13,#a17 { color: green;} 
+
+/*
+.one-word-per-line {
+    word-spacing: <parent-width>; 
+	overflow-wrap: break-word;
+  }
+*/
+
+</style>
+
+<script type="text/javascript" src="grabbable.js"></script>
+</head>
+<body>
+
+</div>
+    <div class="css-script-clear">
+		<div class="shema" > shema </div>
+	
+	</div>
+  </div>
+</div>
+<h1>VGUSS щит електричний ~380V</h1>
+<div class="box grabbable-parent">
+	<div class="item_3 c40">0</div>
+	<div class="item_5 ">Uzip</div>
+	
+	<div class="item_4 lamp c6">A1</div>
+	<div class="item_4 lamp c6">A2</div>
+	<div class="item_4 lamp c6">A3</div>
+	
+	<div class="item_1 c6">0R</div>
+	
+	<div class="item water c10">01</div>
+	<div class="item c20">02</div>
+	<div class="item c16">03</div>
+	<div class="item c16">04</div>
+	<div class="item c20">05</div>
+	<div class="item c10">06</div>
+	<div class="item c25">07</div>
+	<div class="item  c6">08</div>
+	<div class="item  c6">09</div>
+	<div class="item c25">10</div>
+	<div class="item c16">11</div>
+	<div class="item  c6">12</div>
+	<div class="item c16">13</div>
+	<div class="item c10">14</div>
+	<div class="item  c6">15</div>
+	<div class="item water c10">16</div>
+	<div class="item water c16">17</div>
+	<div class="item water c10">18</div>
+	<div class="item water c16">19</div>
+	<div class="item water c16">20</div>
+	<div class="item  c6">21</div>
+	<div class="item PC c6">22</div>
+	<div class="item PC c6">23</div>
+	
+	<div class="item_1 lamp c16">0L</div>
+	<div class="item_1 lamp c10">01</div>
+	<div class="item_4 lamp c6">02</div>
+	<div class="item_0 lamp c6">+03</div>
+	<div class="item_4 lamp c6">04</div>
+	<div class="item_0 lamp c6">+05</div>
+	<div class="item_4 lamp c6">06</div>
+	<div class="item_0 lamp c6">+07</div>
+	<div class="item_4 lamp c6">08</div>
+	<div class="item_0 lamp c6">+09</div>
+	<div class="item_4 lamp c6">10</div>
+	<div class="item_4 lamp c6">11</div>
+	<div class="item_0 lamp c6">+12</div>
+	<div class="item_0 lamp c6">+13</div>
+	<div class="item_0 lamp c6">+14</div>
+	<div class="item_4 lamp c6">?15</div>
+	<div class="item_4 lamp c6">16</div>
+	<div class="item_0 lamp c6">+17</div>
+	<div class="item_0 lamp c6">+18</div>
+	<div class="item_1 lamp c6">19</div>
+	<div class="item_0 lamp c6">+20</div>
+	<div class="item_4 lamp c6">21</div>
+	<div class="item_0 lamp c6">22+</div>
+	<div class="item_4 lamp c6">23</div>
+	
+	<div class="item_1 fan c25">0f</div>
+	<div class="item_4 fan c10">01</div>
+	<div class="item_4 fan c10">02</div>
+	<div class="item_4 fan c10">03</div>
+	<div class="item_4 fan c10">04</div>
+	<div class="item_4 fan c10">05</div>
+	<div class="item_4 fan c10">06</div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>			
+    <div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+
+	<div class="item c16 PC">r1</div>
+	<div class="item_2 PC">r2</div>
+	<div class="item_1 c10 PC">r3</div>
+ 	
+</div>
+
+<script type="text/javascript">
+"use strict";
+!function(){
+	document.querySelector(".grabbable-parent")
+		.grabbable();
+}()
+</script>
+
+
+
+<!--
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+-->
+
+</body>
+</html>

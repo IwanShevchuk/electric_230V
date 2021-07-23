@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VG-USS щит електричний ~380V</title>
+<!--
+* Copyright 06.2021 by Ivan Shevchuk  -- ivan.shevchuk@usoftware.co   
+<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+<link href="/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+
+<link href="sticky_3.css" rel="stylesheet" type="text/css">
+
+-->
+
+<style type="text/css">
+/* якась не дуже важлива штука для поділу - ділення на клітинки + style1_darg_and_drop.css */
+
+
+</style>
+<link href="./css/style1_darg_and_drop.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="grabbable.js"></script>
+
+
+<link href="./css/style2_dey_night.css" rel="stylesheet" type="text/css">
+ <!--
+ dey_night -- style2.css
+ 
+ http://htmlbook.ru/css/z-index
+ http://jsfiddle.net/zbc16jsv/
+ https://webref.ru/css/z-index
+ https://css3clickchart.com/?prop=3d-transforms
+ 
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css" id="pagestyle">
+-->  
+
+
+
+
+</head>
+
+
+<body>
+
+
+<!-- 
+
+<ul class="nav navbar-nav navbar-right">
+          <li><div class="toggle-mode">
+  <div class="icon">
+      <i class="fa fa-sun-o" aria-hidden="true"></i>
+  </div>
+  <div class="toggle-switch">
+      <label class="switch">
+          <input type="checkbox" id="switch-style">
+          <span class="slider round"></span>
+      </label>
+  </div>
+  <div class="icon">
+      <i class="fa fa-moon-o" aria-hidden="true"></i>
+  </div>
+</div>
+</li>
+</ul>
+-->
+<ul class="nav navbar-nav navbar-right">
+<li><div class="toggle-mode"> треба header зробити для меню
+</div>
+</li>
+</ul>
+<!--
+  <script type="text/javascript" src="theme-switcher.js"></script>
+  
+--> 
+
+<!-- Created By Joseph Shenton @TeamiHackify 
+
+https://codepen.io/JosephShenton/pen/YqVoJB
+
+Please feel free to use this toggle if you like. But I request that you give credit to me thank you -->
+
+<div class="button-con">
+  <label for='cb1'>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+      <g id="Sun">
+        <g>
+          <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+        </g>
+      </g>
+    </svg>
+  </label>
+  <input class='toggle' id='cb1' type='checkbox'>
+  <label class='toggle-button' for='cb1'></label>
+  <label for='cb1'>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+    </svg>
+  </label>
+</div>
+
+  
+
+<div class="button-con-2">
+  <label for='cb2'>▼
+
+  </label>
+  <input class='toggle' id='cb2' type='checkbox'>
+  <label class='toggle-button' for='cb2'></label>
+  <label for='cb2'>▲
+
+  </label>
+</div>
+
+
+<div class="button-con-3">
+  <label for='cb3'>▼
+
+  </label>
+  <input class='toggle' id='cb3' type='checkbox'>
+  <label class='toggle-button' for='cb3'></label>
+  <label for='cb3'>▲
+
+  </label>
+</div>
+
+<div class="button-con-4">
+  <label for='cb4'>▼
+
+  </label>
+  <input class='toggle' id='cb4' type='checkbox'>
+  <label class='toggle-button' for='cb4'></label>
+  <label for='cb4'>▲
+
+  </label>
+</div>
+
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="theme-switcher1.js"></script> 
+
+
+ 
+
+<!--  Layers On - Off  -->
+
+
+</div>
+
+
+    <div class="css-script-clear">
+
+			
+		<div class="shema" > shema 
+		<img src="image/elektrika_220V_VG(0).png" alt="shema0" class="card zero" id="zero0">
+		<img src="image/elektrika_220V_VG_layer(3).png" alt="Layer 3 230V variant-B" class="card three hiddens" id="three3">
+	    <img src="image/elektrika_220V_VG_layer(2).png" alt="Layer 2 230V variant-A" class="card two hiddens" id="two2">
+		<img src="image/elektrika_220V_VG_wifi(0).png" alt="Layer 4 wifi" class="card four hiddens" id="four4">
+		<img src="image/elektrika_220V_VG_wifi(0).png" alt="Layer 5 LAN" class="card five hiddens" id="five5">
+		
+		</div>
+
+
+	</div>
+  </div>
+</div>
+<h1>AVGUSS щит електричний ~380V</h1>
+<div class="box grabbable-parent">
+	<div class="item_3 c63">00</div>
+	<div class="item_5 ">Uzip</div>
+	
+	<div class="item_3_duf c50">0R</div>
+	
+	<div class="itemEti water c10">01</div>
+	<div class="itemEti c20">02</div>
+	<div class="itemEti c16">03</div>
+	<div class="itemEti c16">04</div>
+	<div class="itemEti c20">05</div>
+	<div class="itemEti c10">06</div>
+	<div class="itemEti c25">07</div>
+	<div class="itemEti  c6">08</div>
+	<div class="itemEti  c6">09</div>
+	<div class="itemEti c25">10</div>
+	<div class="itemEti c16">11</div>
+	<div class="itemEti  c6">12</div>
+	<div class="itemEti c16">13</div>
+	<div class="itemEti c10">14</div>
+	<div class="itemEti  c6">15</div>
+	<div class="itemEti water c10">16</div>
+	<div class="itemEti water c16">17</div>
+	<div class="itemEti water c10">18</div>
+	<div class="itemEti water c16">19</div>
+	<div class="itemEti water c16">20</div>
+	<div class="itemEti  c6">21</div>
+	<div class="itemEti PC c6">22</div>
+	<div class="itemEti PC c6">23</div>
+	
+		
+	<div class="item_1 fan c25">0f</div>
+	<div class="item_4 fan c10">01</div>
+	<div class="item_4 fan c10">02</div>
+	<div class="item_4 fan c10">03</div>
+	<div class="item_4 fan c10">04</div>
+	<div class="item_4 fan c10">05</div>
+	<div class="item_4 fan c10">06</div>
+	
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+
+	<div class="item c16 PC">r1</div>
+	<div class="item_2 PC">r2</div>
+	<div class="item_1 c10 PC">r3</div>
+ 	
+</div>
+
+<h1>AVGUSS щит електричний ~380V для освітлення </h1>
+<div class="box grabbable-parent-2">
+	<div class="item_3 c40">0</div>
+	<div class="item_1 ">1</div>
+	
+	<div class="item_4 lamp c6">A1</div>
+	<div class="item_4 lamp c6">A2</div>
+	<div class="item_4 lamp c6">A3</div>
+	
+	
+	<div class="item_1 lamp c16">0L</div>
+	<div class="item_1 lamp c10">01</div>
+	<div class="item_4 lamp c6">02</div>
+	<div class="item_0 lamp c6">+03</div>
+	<div class="item_4 lamp c6">04</div>
+	<div class="item_0 lamp c6">+05</div>
+	<div class="item_4 lamp c6">06</div>
+	<div class="item_0 lamp c6">+07</div>
+	<div class="item_4 lamp c6">08</div>
+	<div class="item_0 lamp c6">+09</div>
+	<div class="item_4 lamp c6">10</div>
+	<div class="item_4 lamp c6">11</div>
+	<div class="item_0 lamp c6">+12</div>
+	<div class="item_0 lamp c6">+13</div>
+	<div class="item_0 lamp c6">+14</div>
+	<div class="item_4 lamp c6">?15</div>
+	<div class="item_4 lamp c6">16</div>
+	<div class="item_0 lamp c6">+17</div>
+	<div class="item_0 lamp c6">+18</div>
+	<div class="item_1 lamp c6">19</div>
+	<div class="item_0 lamp c6">+20</div>
+	<div class="item_4 lamp c6">21</div>
+	<div class="item_0 lamp c6">22+</div>
+	<div class="item_4 lamp c6">23</div>
+
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	
+
+</div>	
+
+
+
+
+
+
+
+<h1>AVGUSS щит електричний ~380V~230V розетки </h1>
+<div class="box grabbable-parent-3">
+	<div class="itemEti c16"><s>01</s></div>
+	<div class="itemEti c20">02</div>
+	<div class="itemEti c20"><s>03</s></div>
+	<div class="itemEti c20"><s>04</s></div>
+	<div class="itemEti c25"><s>05</s></div>
+	<div class="itemEti c16"><s>06</s></div>
+	<div class="item_1 c32"><s>07</s></div>
+	<div class="itemEti c10"><s>08</s></div>
+	<div class="itemEti c10"><s>09</s></div>
+	<div class="item_1 c32"><s>10</s></div>
+	<div class="itemEti c20">11</div>
+	<div class="itemEti c16">12</div>
+	<div class="itemEti c16">13</div>
+	<div class="itemEti water c16">14</div>
+	<div class="itemEti water c16">15</div>
+
+	<div class="item_0"> </div>
+	<div class="itemEti c25"><s>к2</s></div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="item_0"> </div>
+	<div class="itemEti c10">к6</div>
+
+</div>	
+
+
+
+<h1>тре докупити ДифАвтоматти~230V </h1>
+<div class="box grabbable-parent-4">
+	
+	<div class="itemEti c20">02</div>
+	<div class="itemEti c20">11</div>
+	<div class="itemEti c16">12</div>
+	<div class="itemEti c16">13</div>
+	<div class="itemEti water c16">14</div>
+	<div class="itemEti water c16">15</div>
+	
+	<div class="itemEti c16">к1</div>
+	<div class="item_0"> </div>
+	<div class="itemEti c16">к3</div>
+	<div class="itemEti c16">к4</div>
+	<div class="itemEti c10">к5</div>
+	<div class="itemEti c10">к6</div>
+
+
+</div>	
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+"use strict";
+!function(){
+	document.querySelector(".grabbable-parent")
+		.grabbable();
+
+	document.querySelector(".grabbable-parent-2")
+		.grabbable();
+	document.querySelector(".grabbable-parent-3")
+		.grabbable();
+	document.querySelector(".grabbable-parent-4")
+		.grabbable();
+
+}()
+</script>
+
+
+
+<!--
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+-->
+
+</body>
+</html>

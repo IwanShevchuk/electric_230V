@@ -1,0 +1,276 @@
+/* якась не дуже важлива штука для поділу - ділення на клітинки + style1_darg_and_drop.css */
+
+* { box-sizing: border-box }
+
+body {}
+.box {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 992px;
+	padding: 40px;
+	background-color: #fafafa;
+    background-image: url('../din_reyka_10_230hp.png');
+}
+
+
+
+.item_0 {
+
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../prozoruy_64p.png');
+}
+
+
+.itemEti {
+/*  Dif-avtomat 1-modul EKF_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../D_eti_RCBO_64p.png');
+}
+.itemEti::after {font-size: 12px; content: "30mA"; position: relative; top: 75px; left: -25px} 
+
+
+
+
+
+.itemEKF {
+/*  Dif-avtomat 1-modul EKF_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../D_EKF_AVDT63M_25A_30mA_prozoruy_64p.png');
+}
+.itemEKF::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+.item {
+/*  Dif-avtomat 1-modul electro-house_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../D_electrohaus_RCBO_64p.png');
+}
+.item::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+.item_1 {
+/*  Dif-avtomat 1-modul schnaider_rcbo */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../D_schnaider_RCBO_64p.png');
+}
+.item_1::after {font-size: 12px; content: "30mA"; position: relative; top: 54px; left: -15px} 
+
+
+
+
+.item_2 {
+/*  avtomat 2-modul */
+	display: inline-block;
+	margin: 6px;
+    width: 140px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../D_eaton_2p_120p.png');
+}
+
+.item_3 {
+/*  avtomat 3-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 215px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../avtomat_3p_eatone.png');
+}
+
+.item_3_duf {
+/*  Dif-avtomat 3-moduli EATON*/
+	display: inline-block;
+	margin: 6px;
+    width: 215px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../eaton_3p_avtomat0.png');
+}
+
+
+
+.item_4 {
+/*  avtomat 1-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 64px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../ekf_1pC10.png');
+}
+
+
+.item_5 {
+/*  Schneider_UZIP 3-moduli */
+	display: inline-block;
+	margin: 6px;
+    width: 215px;
+    height: 210px;
+/*	border: 1px solid #c4c4c4;*/
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.13);
+	line-height: 120px;
+	text-align: center;
+	font-size: 34px;
+	background-image: url('../Schneider_UZIP_190x210.png');
+}
+
+
+
+h1 { margin:150px auto 30px auto;}
+
+.shema { width: 1799px; height: 1210px; background-image: url('../elektrika_220V_VG_Screenshot (2)_avtomatu.png') ; }
+
+.PC { color: green;}
+.fan { color: violet;}
+.lamp { color: yellow;}
+.water { color: blue;}
+.laptop { color: red;}
+
+.water::after { content: "10mA";
+/* font-size: 12px; position: relative; top: 54px; */ } 
+
+
+.c6::before {
+	content: "C6"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c10::before {	
+	content: "C10"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c16::before {
+	content: "C16"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c20::before {
+	content: "C20"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c25::before {
+	content: "C25"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c32::before {
+	content: "C32"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+.c40::before {
+	content: "C40"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+
+.c50::before {
+	content: "C50"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+
+.c63::before {
+	content: "C63"; 
+	font-size: 12px; 
+	font-weight: bold;
+    position: relative;
+    top: 38px;
+    left: 23px;
+}
+
+
+/* reserved avtomats */
+#a13,#a17 { color: green;} 
+
+/*
+.one-word-per-line {
+    word-spacing: <parent-width>; 
+	overflow-wrap: break-word;
+  }
+*/
